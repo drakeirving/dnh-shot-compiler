@@ -23,7 +23,7 @@ def compile_shots(obj):
 			if ('colors' in bunch and len(bunch['origin']) > 0 and
 				'origin' in bunch and len(bunch['origin']) == 2 and
 				'size' in bunch and len(bunch['size']) == 2 and
-				('off' in bunch and len(bunch['off']) == 2) or ('ani_off' in bunch and len(bunch['ani_off']) == 3)):
+				('off' in bunch and len(bunch['off']) == 2) or ('animation' in bunch and len(bunch['animation']) == 3)):
 
 				s += '// bunch\n\n'
 
@@ -32,18 +32,18 @@ def compile_shots(obj):
 				size = bunch['size']
 				off = None
 				if 'off' in bunch: off = bunch['off']
-				ani_off = None
-				if 'ani_off' in bunch: ani_off = bunch['ani_off']
+				animation = None
+				if 'animation' in bunch: animation = bunch['animation']
 
 				for i in range(len(bunch['colors'])):
 					s += 'ShotData{\n'
 
 					s += '\tid = ' + str(id) + '\n'
 
-					if ani_off:
+					if animation:
 						s += '\tAnimationData{\n'
-						for j in range(ani_off[2]):
-							s += '\t\tanimation_data = (' + str([ l+ani_off[0]*j, t+ani_off[1]*j, l+ani_off[0]*j + size[0], t+ani_off[1]*j + size[1] ])[1:-1] + ')\n'
+						for j in range(animation[2]):
+							s += '\t\tanimation_data = (' + str([ animation[3], l+animation[0]*j, t+animation[1]*j, l+animation[0]*j + size[0], t+animation[1]*j + size[1] ])[1:-1] + ')\n'
 						s += '\t}\n'
 					else:
 						s += '\trect = (' + str([ l, t, l + size[0], t + size[1] ])[1:-1] + ')\n'
