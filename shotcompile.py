@@ -49,7 +49,14 @@ def compile_shots(obj):
 						s += '\trect = (' + str([ l, t, l + size[0], t + size[1] ])[1:-1] + ')\n'
 
 					if 'collision' in bunch:
-						s += '\tcollision = ' + str(bunch['collision']) + '\n'
+						if isinstance(bunch['collision'], list):
+							if isinstance(bunch['collision'][0], list):
+								for j in range(len(bunch['collision'])):
+									s += '\tcollision = (' + str(bunch['collision'][j])[1:-1] + ')\n'
+							else:
+								s += '\tcollision = (' + str(bunch['collision'])[1:-1] + ')\n'
+						else:
+							s += '\tcollision = ' + str(bunch['collision']) + '\n'
 
 					if 'fixed_angle' in bunch:
 						s += '\tfixed_angle = ' + str(bunch['fixed_angle']).lower() + '\n'

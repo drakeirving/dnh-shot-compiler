@@ -37,7 +37,7 @@ The format for each shot group object is as follows:
 
 **animation** (optional): An array of size 4, where the first two elements are the `(x,y)` offset between the rects of each animation frame, the third element is the number of frames in the animation, and the fourth is the duration of each frame. The `off` key can be omitted if this key is present (for single animated shots). (e.g. `[16,0,5,4]`)
 
-**collision** (optional): The radius of each shot's hitbox.
+**collision** (optional): If set to a number, is the radius of each shot's hitbox. If set to an array of size 3, the elements are the radius and `(x,y)` offset of the hitbox. If set to an array of these arrays, multiple hitboxes are given. (e.g. `8`, `[8,0,-2]`, `[[4,0,-2],[4,0,2]]`)
 
 **fixed_angle** (optional): Set to `true` if the shot graphic remains fixed, `false` if it rotates according to movement angle.
 
