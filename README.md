@@ -55,6 +55,8 @@ The format for each shot group object is as follows:
 
 ### Example ###
 
+See [shots.json](shots.json) for a more complete sample file that makes use of most options.
+
 ```json
 {
 	"shot_image": "./etama01.png",

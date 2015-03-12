@@ -1,0 +1,107 @@
+{
+	"shot_image": "./etama01.png",
+	"delay_rect": [2,478,34,510],
+	"shots": [
+		{
+			// glitter
+			"origin": [4,4],
+			"size": [8,8],
+			"off": [10,0],
+			"collision": 4,
+			"angular_velocity": 8,
+			"colors": ["red","orange","yellow","ltgreen","green","aqua","ltblue","blue","purple","pink","white","black"]
+		},
+		{
+			// pellets
+			"origin": [4,14],
+			"size": [8,8],
+			"off": [10,0],
+			"collision": 4,
+			"fixed_angle": true,
+			"colors": ["red","orange","yellow","ltgreen","green","aqua","ltblue","blue","purple","pink","white","black"]
+		},
+		{
+			// droplets
+			"origin": [4,26],
+			"size": [10,14],
+			"off": [15,0],
+			"collision": 4,
+			"colors": ["red","darkred","orange","yellow","green","aqua","ltblue","blue","purple","pink","white","black"]
+		},
+		{
+			// rice
+			"origin": [4,44],
+			"size": [10,14],
+			"off": [15,0],
+			"collision": 4,
+			"colors": ["red","darkred","orange","yellow","green","aqua","blue","purple","pink","darkpink","white","black"]
+		},
+		{
+			// double
+			"origin": [4,101],
+			"size": [10,14],
+			"off": [15,0],
+			"collision": 4,
+			"colors": ["red","orange","yellow","green","aqua","blue","purple","pink","white"]
+		},
+		{
+			// inverted rice
+			"origin": [4,119],
+			"size": [10,14],
+			"off": [15,0],
+			"collision": 4,
+			"colors": ["red","orange","yellow","green","aqua","blue","purple","pink"]
+		},
+		{
+			// small
+			"origin": [4,256],
+			"size": [16,16],
+			"off": [20,0],
+			"collision": 4,
+			"fixed_angle": true,
+			"colors": ["red","darkred","orange","yellow","green","aqua","ltblue","blue","purple","pink","white"]
+		},
+		{
+			// ringed small
+			"origin": [4,276],
+			"size": [16,16],
+			"off": [20,0],
+			"collision": 4,
+			"fixed_angle": true,
+			"colors": ["red","darkred","orange","yellow","ltgreen","green","aqua","ltblue","blue","purple","pink","white"]
+		},
+		{
+			// amulets
+			"origin": [4,296],
+			"size": [16,16],
+			"off": [20,0],
+			"collision": 4,
+			"colors": ["red","darkred","orange","yellow","ltgreen","green","aqua","blue","purple","pink","white","black"]
+		},
+		{
+			// fireballs
+			"origin": [256,32],
+			"size": [32,32],
+			"off": [0,32],
+			"animation": [32,0,4,4],
+			"collision": 4,
+			"render": "ADD_ARGB",
+			"colors": ["red","blue"]
+		}
+	],
+	"colors": {
+		"red": [255,0,0],
+		"darkred": [128,0,0],
+		"orange": [255,128,0],
+		"yellow": [255,255,0],
+		"ltgreen": [64,224,32],
+		"green": [32,160,0],
+		"aqua": [0,255,255],
+		"ltblue": [0,128,255],
+		"blue": [0,0,255],
+		"purple": [128,0,255],
+		"pink": [255,0,255],
+		"white": [255,255,255],
+		"black": [64,64,64]
+	}
+}
